@@ -1,3 +1,3 @@
 # tour-plan
 
-Smirnov Ilya project (teamsesh 2021)
+Smirnov Ilya project teamsesh 2020
