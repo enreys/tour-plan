@@ -482,7 +482,7 @@ template {
 }
 
 .hotel {
-  margin-top: 13px;
+  margin-top: 22px;
 }
 
 .hotel-info {
@@ -575,6 +575,12 @@ template {
 .lower-case {
   font-size: 10px;
   line-height: 18px;
+}
+
+.stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .breadcrumb-list {
@@ -671,9 +677,8 @@ template {
     height: 1px;
     background-color: #333333;
   }
-  .stars {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
+  .hotel {
+    margin-top: 42px;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
