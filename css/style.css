@@ -677,6 +677,10 @@ template {
     height: 1px;
     background-color: #333333;
   }
+  .stars {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
   .hotel {
     margin-top: 42px;
   }
@@ -718,6 +722,9 @@ template {
 @media (max-width: 320px) {
   .container {
     max-width: 280px;
+  }
+  .hotel__offer {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
