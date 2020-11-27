@@ -7,6 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+  type="text/javascript"> -->
+  </script>
 </head>
 <body>
     <header class="navbar">
@@ -84,29 +87,29 @@
                 </div>
             </div>
             <div class="hotel-grid">
-                <div class="slider">
+                <div class="slider hotel__slider">
                     <!-- Slider main container -->
                     <div class="swiper-container">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                             <!-- Slides -->
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/slide.jpg" alt="slide">
+                                <img class="swiper-slider__image" src="img/slide.jpg" alt="slide">
                             </div>
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/grandhilton1.jpeg" alt="slide">
+                                <img class="swiper-slider__image" src="img/grandhilton1.jpeg" alt="slide">
                             </div>
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/grandhilton2.jpeg" alt="slide">
+                                <img class="swiper-slider__image" src="img/grandhilton2.jpeg" alt="slide">
                             </div>
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/grandhilton3.jpeg" alt="slide">
+                                <img class="swiper-slider__image" src="img/grandhilton3.jpeg" alt="slide">
                             </div>
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/grandhilton4.jpeg" alt="slide">
+                                <img class="swiper-slider__image" src="img/grandhilton4.jpeg" alt="slide">
                             </div>
                             <div class="swiper-slide">
-                                <img class="slide-image" src="img/grandhilton5.jpeg" alt="slide">
+                                <img class="swiper-slider__image" src="img/grandhilton5.jpeg" alt="slide">
                             </div>
                         </div>
                         <!-- If we need navigation buttons -->
@@ -143,9 +146,13 @@
                         </div>
                         <button class="button booking__button">View Other Options</button>
                     </div>
+
+                    <!-- <div id="map" style="width: 347px; height: 213px;"></div> -->
                     <div class="map">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f4086a9b00e1e54fd5a8adcdd9014617e63a88b6448e227181305d65aede4c6&amp;source=constructor" width="347" height="213" frameborder="0"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f4086a9b00e1e54fd5a8adcdd9014617e63a88b6448e227181305d65aede4c6&amp;source=constructor" width="100%" height="213" frameborder="0"></iframe>
                     </div>
+
+
                 </div>
             </div>
         </div>
