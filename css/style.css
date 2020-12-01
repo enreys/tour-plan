@@ -806,14 +806,14 @@ template {
 }
 
 .newsletter {
-  margin-bottom: 40px;
-  margin-top: 70px;
+  margin-top: 71px;
   position: relative;
+  min-height: 260px;
   background-image: url(../img/newsletter-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 98px 0 87px 0;
+  padding: 80px 0 27px 0;
 }
 
 .newsletter:before {
@@ -918,7 +918,7 @@ template {
 }
 
 .reviews {
-  padding: 0 70px 0;
+  padding: 12px 0 70px 0;
 }
 
 .reviews__title {
@@ -928,7 +928,6 @@ template {
   line-height: 45px;
   text-align: center;
   text-transform: uppercase;
-  color: #0A223D;
   margin-bottom: 70px;
 }
 
@@ -945,7 +944,7 @@ template {
           align-items: center;
   background-color: #ffffff;
   border-radius: 8px;
-  max-width: 731px;
+  max-width: 730px;
   margin: 45px auto 0;
   padding: 0 62px 30px;
   position: relative;
@@ -975,9 +974,9 @@ template {
 
 .reviews-slider__button {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 44%;
+  -webkit-transform: translateY(-35%);
+          transform: translateY(-35%);
   width: 30px;
   height: 30px;
   background-repeat: no-repeat;
@@ -990,11 +989,13 @@ template {
 }
 
 .reviews-slider__button--prev {
+  margin-left: 17px;
   left: 0;
   background-image: url(../img/arrov-prev-secondary.svg);
 }
 
 .reviews-slider__button--next {
+  margin-right: 17px;
   right: 0;
   background-image: url(../img/arrov-next-secondary.svg);
 }
@@ -1020,7 +1021,7 @@ template {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 9px;
+  margin-bottom: -3px;
 }
 
 .reviews-slider__username {
@@ -1127,22 +1128,43 @@ template {
     max-width: 100%;
   }
   .booking {
+    padding-top: 27px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 45px;
     width: 340px;
+    height: 210px;
   }
   .map {
     margin-bottom: 0;
     width: 340px;
   }
   .newsletter {
-    padding: 92px 0 93px 0;
-  }
-  .reviews-slider {
-    max-width: 579px;
+    margin-top: 57px;
+    padding: 73px 0 73px 0;
   }
   .reviews__title {
+    font-style: normal;
+    font-weight: bold;
     font-size: 30px;
     line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
     margin-bottom: 50px;
+  }
+  .reviews-slider__item {
+    max-width: 579px;
+  }
+  .reviews-slider__item:before {
+    display: none;
+  }
+  .reviews-slider__item:after {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 48%;
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
   }
 }
 
@@ -1217,12 +1239,16 @@ template {
     max-width: 100%;
     height: 280px;
   }
+  .hotel {
+    margin-bottom: 0;
+  }
   .hotel-right {
+    height: 450px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 450px;
+    margin-bottom: 0;
   }
   .hotel-slider {
     height: 350px;
@@ -1231,9 +1257,14 @@ template {
     width: 100%;
   }
   .map {
+    margin-top: 20px;
+    margin-bottom: 0;
     width: 100%;
   }
   .newsletter {
+    margin-top: 70px;
+    margin-bottom: 0;
+    min-height: 320px;
     background-repeat: no-repeat;
     padding: 92px 0 93px 0;
   }
@@ -1317,18 +1348,29 @@ template {
             align-items: center;
     margin-top: 0;
   }
+  .hotel-right {
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
   .hotel__slider {
     width: 278px;
     height: 179px;
     margin-top: 16px;
   }
   .booking {
-    margin-bottom: 0;
     width: 100%;
     height: 210px;
     padding-top: 26px;
     padding-left: 22px;
     padding-right: 22px;
+    margin-bottom: 0;
   }
   .booking__number {
     margin-right: 5px;
@@ -1339,12 +1381,13 @@ template {
     margin-bottom: 40px;
   }
   .newsletter {
+    width: 320px;
+    height: 320px;
     margin-top: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-bottom: 5px;
-    padding: 55px 0 70px 0;
+    padding: 55px 0 79px 0;
   }
   .newsletter-wrapper {
     padding-bottom: 10px;
@@ -1377,12 +1420,12 @@ template {
     padding: 0 20px 0;
   }
   .reviews__title {
-    margin-top: 40px;
-    margin-bottom: 42px;
+    margin-top: 33px;
+    margin-bottom: 43px;
     font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
     text-align: center;
     text-transform: uppercase;
   }
