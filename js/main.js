@@ -26,21 +26,54 @@ var hotelSlider = new Swiper('.hotel-slider', {
     },
   });
 
-
-type="text/javascript"
-ymaps.ready(init);
-  function init() {
-    var myMap = new ymaps.Map('map', {
-        center: [7.838, 98.2989],
-        zoom: 15
-      }, {
-         searchControlProvider: 'yandex#search'
-      });
-      ymaps.geoXml.load('data.xml')
-      .then(function (res) {
-          // Добавляем коллекцию геообъектов на карту.
-          myMap.geoObjects.add(res.geoObjects);
-      })
-  };
-
   
+
+// type="text/javascript"
+// ymaps.ready(init);
+//   function init() {
+//     var myMap = new ymaps.Map('map', {
+//         center: [7.838, 98.2989],
+//         zoom: 15
+//       }, {
+//          searchControlProvider: 'yandex#search'
+//       });
+//       ymaps.geoXml.load('data.xml')
+//       .then(function (res) {
+//           // Добавляем коллекцию геообъектов на карту.
+//           myMap.geoObjects.add(res.geoObjects);
+//       })
+//   };
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [7.838, 98.2989],
+            zoom: 15
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [7.838, 98.2989]
+            },
+        }, {
+            // preset: 'islands#blackStretchyIcon',
+            draggable: true
+        }),
+        myPieChart = new ymaps.Placemark([
+          7.838, 98.2989
+        ]);
+    myMap.geoObjects
+        .add(myGeoObject)
+        .add(myPieChart)
+        .add(new ymaps.Placemark([7.838, 98.2989], {
+        }, {
+            preset: 'islands#icon',
+            iconColor: '#0095b6'
+        }))
+
+}
