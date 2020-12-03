@@ -75,5 +75,5 @@ function init() {
             preset: 'islands#icon',
             iconColor: '#0095b6'
         }))
-
 }
+$('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpg'});
