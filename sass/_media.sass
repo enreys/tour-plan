@@ -20,6 +20,9 @@
     .footer
         &__input
             flex-basis: 100%
+
+
+
 @media (max-width: 992px)
     .container, .newsletter-wrapper
         max-width: 700px
@@ -93,7 +96,10 @@
                     right: 0
     .activities
         padding-top: 14px
-        padding: 20px 0 70px 0
+        padding: 20px 0 50px 0
+        &__title
+            margin-top: 11px
+            margin-bottom: 57px
         &-wrapper
             flex-wrap: wrap
         &__card
@@ -102,36 +108,60 @@
         width: 340px
         height: 255px         
     .footer
+        padding-top: 70px
         padding-bottom: 33px
         &-wrapper
-            grid-template-columns: repeat(6, 1fr)
-            grid-row-gap: 38px 
+            grid-template-columns: repeat(8, 1fr)
+            grid-row-gap: 30px 
+            grid-column-gap: 0
         &__input
             flex-basis: 47%
+        &__list
+            margin-top: 20px
         &__logo
-            width: 104px
-            height: 120px
+            width: 97px
+            height: 115px
             grid-row: 1 / 2
             grid-column: span 2
         &__legal
-            grid-column: span 2
+            margin-left: 63px
+            grid-column: 6 / 9
         &__social
             &-network
+                margin-left: 15px
+                margin-top: 17px
                 grid-row: 1 / 2
                 grid-column: span 4 
                 align-self: center
+                align-items: center
+                text-align: center
         &__categories
             grid-column: span 2
             grid-row: 2 / 3
         &__additional
-            grid-column: span 2
+            margin-left: 17px
+            // padding-left: 17px
+            grid-column: 3 / 6
+        &__text
+            margin-top: 0
+            margin-bottom: 22px
+        &__title
+            &--mb-3
+                margin-bottom: 27px 
+        &__ul
+            &-details
+                margin-left: 5px
         &__contact
             &-details
-                grid-column: span 5
+                align-items: center
+                margin-top: 30px
+                margin-bottom: 0
+                grid-column: span 6
                 grid-row: 3
             &-form
-                grid-column: span 5
+                grid-column: 1 / 8
                 grid-row: 4
+                max-width: 539px 
         &__ul
             &-grid
                 display: flex
@@ -140,6 +170,15 @@
                 justify-self: start
                 width: 283px
                 margin-top: 6px
+        &__input
+            width: 255px
+            flex-basis: 47%
+        &__message
+            max-width: 539px
+        &__rules
+            margin-top: 58px
+            
+
 @media (max-width: 768px)
     .container,
         max-width: 576px
@@ -243,6 +282,16 @@
                 justify-self: start
                 width: 283px
                 margin-top: 6px
+            &-details
+                margin-left: 0
+        &__social
+            &-network
+                margin-left: 15px
+                margin-top: 17px
+                grid-row: 1 / 2
+                grid-column: span 5
+    
+
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -268,9 +317,11 @@
             grid-column: 1
         &__social
             &-network
-                grid-row: 2
+                margin-left: 0
+                grid-row: 2 / 3
                 grid-column: 1
         &__additional
+            margin-left: 0
             grid-row: 3
             grid-column: 1
         &__categories
@@ -290,11 +341,17 @@
             flex-basis: 100%
         &__rules
             margin-top: 56px   
+            // width: 277px
             display: flex
             flex-wrap: wrap
         &__ul
             &-grid
                 margin-bottom: 10px
+        &__legal
+            margin-top: 0
+            margin-left: 0
+    .card
+        width: 100%
 @media (max-width: 320px)
     .container 
         max-width: 281px
@@ -358,7 +415,13 @@
                 line-height: 38px;
                 margin-top: 5px
     .activities
-            padding: 20px 0 60px 0
+            padding: 45px 0 50px 0
+            &__title
+                font-style: normal
+                font-weight: bold
+                font-size: 18px
+                line-height: 23px
+                margin-bottom: 35px
     .subscribe
         width: 280px
         height: 55px
@@ -394,15 +457,17 @@
             text-transform: uppercase;
             margin-top: 38px
             margin-bottom: 36px
-        &__card
-            margin-bottom: 20px
-            width: 280px
-            height: 255px
     .footer
+        padding-top: 65px
         padding-bottom: 21px
+        &-wrapper
+            grid-row-gap: 23px 
         &__input
             flex-basis: 100%    
         &__contact
+            &-details
+                margin-top: 0
+                margin-bottom: 0
             &-form
                 flex-basis: 100%
         &__button 
@@ -412,6 +477,52 @@
             width: 100%
         &__rules
             margin-top: 30px
+        &__social
+            &-network
+                // width: 60%
+                margin-left: 0
+                grid-row: 2 / 3
+                grid-column: 1
+                flex-wrap: wrap
+        &__icon
+            &-wrapper
+                margin-right: 13px        
+        &__legal
+            margin-top: 7px
+            margin-left: 0
+            grid-row: 3 / 4
+            grid-column: 1
+        &__additional
+            margin-top: 5px
+            margin-left: 0
+            grid-row: 4 / 5
+        &__categories
+            margin-top: 7px
+            margin-left: 0
+            grid-row: 5 / 6
+        &__text
+            margin-bottom: 0
+        &__item
+            &--mb-2
+                margin-top: 23px
+                margin-bottom: 0
+        &__message
+            margin-bottom: 15px
+        &__title
+            &--mb-3
+                // margin-bottom: 5px
+                margin-top: 18px
+            &--inline
+                margin-bottom: 20px
+        &__rules
+            margin-top: 22px
+    .activities
+        &__card
+            width: 281px
+            height: 255px
+    .mt-4
+        margin-top: 30px
+        margin-bottom: 15px
 
 
 
