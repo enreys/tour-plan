@@ -20,9 +20,11 @@
     .footer
         &__input
             flex-basis: 100%
-
-
-
+    .packages
+        &-card
+            &--2
+                width: 100%
+                height: 100%
 @media (max-width: 992px)
     .container, .newsletter-wrapper
         max-width: 700px
@@ -140,7 +142,6 @@
             grid-row: 2 / 3
         &__additional
             margin-left: 17px
-            // padding-left: 17px
             grid-column: 3 / 6
         &__text
             margin-top: 0
@@ -177,8 +178,11 @@
             max-width: 539px
         &__rules
             margin-top: 58px
-            
-
+    // упаковки
+    .packages
+        &-wrapper
+            grid-template-rows: 500px 500px 500px
+            grid-template-columns: 1fr 1fr
 @media (max-width: 768px)
     .container,
         max-width: 576px
@@ -290,8 +294,54 @@
                 margin-top: 17px
                 grid-row: 1 / 2
                 grid-column: span 5
-    
-
+@media ( max-width: 666px )
+    .packages
+        &-wrapper
+        &-card
+            &--2
+                &__content
+                    padding: 20px 21px 15px 32px
+                &__button
+                    padding: 11px 20px
+            &--1
+                padding-bottom: 0
+                &__content
+                    padding-bottom: 0
+@media ( max-width: 640px )
+  .container
+    max-width: 540px
+  .packages
+        &-wrapper
+            grid-template-columns: 2fr
+        &-card
+        &--2
+            display: flex
+            flex-direction: column
+            &__image-block
+                width: 100%
+                max-height: 40%
+            &__image
+                width: 100%
+                height: 100%
+            &__content
+                width: 100%
+                height: 60%
+                flex-basis: 100%
+            &__title
+                margin: 0
+            &__priceoff
+                margin: 0
+            &__price
+                margin: 0
+        &--1
+            grid-column-start: span 2
+        &--1,&--2
+            &__title
+                margin-bottom: 7px
+            &__text
+                margin-bottom: 12px
+            &__button
+                padding: 11px 15px
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -352,7 +402,49 @@
             margin-left: 0
     .card
         width: 100%
-@media (max-width: 320px)
+    .packages
+        &-wrapper
+            grid-template-rows: auto
+            grid-template-columns: 1fr
+        &-card
+            &--2
+                display: flex
+                flex-direction: column
+                grid-column: 1 / 1
+                grid-row: span 2
+                max-heigh: 300px
+                &__image-block
+                    width: 100%
+                    max-height: 256px
+                &__image
+                    width: 100%
+                    height: 100%
+                &__content
+                    width: 100%
+                    flex-basis: 50%
+                &__offer
+                    padding: 8px 12px
+                &__title
+                    margin-top: 0
+                &__priceoff
+                    margin-top: 0
+                &__content
+                    min-height: 380px
+            &--1
+                &__image
+                    width: 100%
+                    max-height: 256px
+                &__offer
+                    padding: 8px 12px
+                    font-weight: 600
+                    font-size: 12px
+                &__content
+                    justify-content: space-between
+                    padding-bottom: 20px
+                    max-height: 400px
+                // grid-template-rows: auto
+
+@media ( max-width: 320px )
     .container 
         max-width: 281px
     .navbar
@@ -394,7 +486,7 @@
     .newsletter
         width: 320px
         height: 320px
-        margin-top: 0
+        margin-top: 60px
         background-repeat: no-repeat
         background-size: cover
         background-position: center
@@ -522,7 +614,68 @@
             height: 255px
     .mt-4
         margin-top: 30px
-        margin-bottom: 15px
+        margin-bottom: 15px      
+    &-card
+        &--1
+            height: 100%
+        &__image-block
+            height: 50%
+        &__description
+            margin-top: 5px
+        &__priceoff
+            margin-top: 8px
+        &__price
+            margin-top: 5px
+    .packages
+        padding-bottom: 30px
+        &-wrapper
+            grid-template-rows: auto repeat(4, 430px)
+            grid-template-columns: 1fr
+        &-card
+            &--2
+                height: 700px
+                display: flex
+                flex-direction: column
+                &__image-block
+                   width: 100%
+                &__image
+                    width: 100%
+                    height: 100%
+                &__content
+                    width: 100%
+                    margin-top: 10px
+                &__priceoff
+                    margin-top: 8px
+                    margin-bottom: 10px
+                &__price
+                    margin-top: 0
+                &__description
+                    margin-top: 10px
+                &__button
+                    padding: 5px
+                &__price-button-row
+                    align-items: center
+
+            &--1
+                height: 100%
+                &__image-block
+                    height: 50%
+                &__image
+                    width: 100%
+                    height: 100%
+                &__description
+                    margin-top: 5px
+                &__priceoff
+                    margin-top: 8px
+                &__price
+                    margin-top: 0
+                &__button
+                    padding: 5px
+                &__price-button-row
+                    align-items: center
+
+
+
 
 
 

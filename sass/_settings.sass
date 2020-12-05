@@ -9,3 +9,22 @@ body
     margin: auto
 img
     max-width: 100%
+ul
+  padding: 0
+  margin: 0
+.btn
+  border: none
+  cursor: pointer
+  &:focus
+    outline: none
+
+.btn--primary
+  border-radius: 6px
+  background-color: $primary
+  color: #fff
+  &:active
+    background-color: lighten($primary, 10%)
+
+a
+  color: $text-color
+  text-decoration: none
