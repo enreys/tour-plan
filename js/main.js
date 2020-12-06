@@ -25,24 +25,6 @@ var hotelSlider = new Swiper('.hotel-slider', {
       
     },
   });
-
-  
-
-// type="text/javascript"
-// ymaps.ready(init);
-//   function init() {
-//     var myMap = new ymaps.Map('map', {
-//         center: [7.838, 98.2989],
-//         zoom: 15
-//       }, {
-//          searchControlProvider: 'yandex#search'
-//       });
-//       ymaps.geoXml.load('data.xml')
-//       .then(function (res) {
-//           // Добавляем коллекцию геообъектов на карту.
-//           myMap.geoObjects.add(res.geoObjects);
-//       })
-//   };
 ymaps.ready(init);
 
 function init() {
@@ -77,3 +59,9 @@ function init() {
         }))
 }
 $('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpg'});
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener('click', function() {
+  console.log('Клик по кнопке меню');
+  document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
+} )
