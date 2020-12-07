@@ -1381,6 +1381,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
+  color: black;
 }
 
 .footer__message {
@@ -1399,6 +1400,7 @@ template {
   color: #BDBDBD;
   margin-bottom: 22px;
   resize: none;
+  color: black;
 }
 
 .footer__button {
