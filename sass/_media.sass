@@ -19,7 +19,9 @@
             height: 230px
     .footer
         &__input
-            flex-basis: 100%
+            // width: 100%
+            &-group
+                flex-basis: 100%    
     .packages
         &-card
             &--2
@@ -117,7 +119,8 @@
             grid-row-gap: 30px 
             grid-column-gap: 0
         &__input
-            flex-basis: 47%
+            &-group
+                flex-basis: 47%
         &__list
             margin-top: 20px
         &__logo
@@ -172,8 +175,9 @@
                 width: 283px
                 margin-top: 6px
         &__input
-            width: 255px
-            flex-basis: 47%
+            width: 100%
+            &-group
+                flex-basis: 47%
         &__message
             max-width: 539px
         &__rules
@@ -183,17 +187,20 @@
         &-wrapper
             grid-template-rows: 500px 500px 500px
             grid-template-columns: 1fr 1fr
+    // .modal
+    //     &__info
+    //         margin-left: 41px
     .modal
         &__dialog
             width: 380px
             padding: 33px 44px
-
 
 @media (max-width: 768px)
     .container,
         max-width: 590px
     body
         padding-top: 78px
+
     .navbar
         &--mobile
             &_fixed
@@ -322,7 +329,8 @@
     // footer
     .footer
         &__input
-            flex-basis: 47%
+            &-group
+                flex-basis: 47%
         &__ul
             &-grid
                 display: flex
@@ -339,7 +347,16 @@
                 margin-top: 17px
                 grid-row: 1 / 2
                 grid-column: span 5
-
+    // .modal
+    //     &__button
+    //         margin-bottom: 10px
+    //     &__dialog
+    //         padding: 33px 48px
+    //     &__info
+    //         margin-left: 0
+        .modal
+            &__dialog
+                padding: 33px 44px
 @media ( max-width: 666px )
     .packages
         &-wrapper
@@ -353,6 +370,18 @@
                 padding-bottom: 0
                 &__content
                     padding-bottom: 0
+        &__modal
+            &__dialog
+                padding: 33px 50px
+            &__button
+                display: flex
+                width: 100%
+                flex-basis: 100%
+     .footer
+        &__input
+            width: 100%
+            &-group
+                flex-basis: 100%
 
 @media ( max-width: 655px )
     .container
@@ -434,6 +463,14 @@
                     padding-bottom: 20px
                     max-height: 400px
                 // grid-template-rows: auto
+    // .modal
+    //     &__dialog
+    //         padding: 33px 48px
+    //     &__button
+    //         display: flex
+    //     &__info
+    //         margin: 10px
+    //         margin-left: 0
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -480,7 +517,8 @@
                 grid-row: 7
                 grid-column: 1
         &__input
-            flex-basis: 100%
+            &-group
+                flex-basis: 100%
         &__rules
             margin-top: 56px   
             // width: 277px
@@ -536,7 +574,21 @@
                     max-height: 400px
                 // grid-template-rows: auto
 
-
+@media (max-width: 479px)
+    .modal
+    &__dialog
+        width: 100px
+        // padding: 15px 15px 0
+    &__wrapper
+        flex-direction: column
+    &__info
+        align-self: start
+        order: -1
+        margin-bottom: 15px
+    &__button
+        width: 100%
+    &__form
+        padding-bottom: 15px
 @media ( max-width: 320px )
     .container 
         max-width: 281px
@@ -672,7 +724,9 @@
         &-wrapper
             grid-row-gap: 23px 
         &__input
-            flex-basis: 100%    
+            width: 100%
+            &-group
+                flex-basis: 100%    
         &__contact
             &-details
                 margin-top: 0
@@ -793,8 +847,18 @@
                     align-items: center
     .modal
         &__dialog
-            width: 300px
-            padding: 15px 15px
+            max-width: 300px 
+            padding: 15px 15px 0
+        &__wrapper
+            flex-direction: column
+        &__button
+            width: 100%
+        &__form
+            padding-bottom: 15px
+        &__info
+            align-self: start
+            order: -1
+            margin-bottom: 15px
 
 
 

@@ -71,6 +71,12 @@ a {
   cursor: pointer;
 }
 
+.invalid {
+  font-size: 15px;
+  color: #EC1F46;
+  border-bottom: 2px solid #EC1F46;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1391,6 +1397,10 @@ template {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   min-width: 255px;
   -ms-flex-preferred-size: 47%;
@@ -1832,13 +1842,13 @@ template {
   font-size: 12px;
   line-height: 15px;
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1859,6 +1869,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .modal__button {
@@ -1867,7 +1879,7 @@ template {
   font-size: 12px;
   line-height: 15px;
   width: 160px;
-  margin-top: 0;
+  margin-top: 15px;
   padding: 17px 65px;
   height: 50px;
   text-align: center;
@@ -1895,6 +1907,9 @@ template {
     height: 230px;
   }
   .footer__input {
+    width: 100%;
+  }
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -2118,6 +2133,8 @@ template {
   }
   .footer__input {
     width: 255px;
+  }
+  .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
@@ -2329,7 +2346,7 @@ template {
     width: 49%;
     height: 250px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 47%;
         flex-basis: 47%;
   }
@@ -2371,6 +2388,17 @@ template {
   }
   .packages-card--1__content {
     padding-bottom: 0;
+  }
+  .packages__modal__dialog {
+    padding: 33px 50px;
+  }
+  .packages__modal__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -2648,6 +2676,33 @@ template {
             justify-content: space-between;
     padding-bottom: 20px;
     max-height: 400px;
+  }
+}
+
+@media (max-width: 479px) {
+  __dialog {
+    width: 100px;
+  }
+  __wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  __info {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 15px;
+  }
+  __button {
+    width: 100%;
+  }
+  __form {
+    padding-bottom: 15px;
   }
 }
 
@@ -2999,8 +3054,29 @@ template {
             align-items: center;
   }
   .modal__dialog {
-    width: 300px;
-    padding: 15px 15px;
+    max-width: 300px;
+    padding: 15px 15px 0;
+  }
+  .modal__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal__button {
+    width: 100%;
+  }
+  .modal__form {
+    padding-bottom: 15px;
+  }
+  .modal__info {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */

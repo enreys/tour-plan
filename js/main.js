@@ -83,4 +83,26 @@ menuButton.addEventListener('click', function() {
     modalOverlay.removeClass('modal__overlay--visible');
     modalDialog.removeClass('modal__dialog--visible');
   }
+
+  //  Обработка форм
+    $('.form').each(function(){
+    $('.phone-form').mask('+7 (999) 999-99-99');
+    $(this).validate( {
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Укажите ваше имя",
+          minlength: "Имя должно быть не короче 2 букв",
+        },
+        email: {
+          required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
+          email: "Ваш электронный адрес должен выглядеть так: name@domain.com"
+        },
+        phone: {
+          required: "Телефон обязателен",
+        },
+      },
+    });
+  });
 });
+
