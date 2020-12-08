@@ -183,6 +183,16 @@
         &-wrapper
             grid-template-rows: 500px 500px 500px
             grid-template-columns: 1fr 1fr
+    .modal
+        &__info
+            margin-left: 41px
+@media (max-width: 899px)
+    .modal
+        &__button
+            display: flex
+        &__info
+            margin-left: 0
+
 @media (max-width: 768px)
     .container,
         max-width: 590px
@@ -333,6 +343,13 @@
                 margin-top: 17px
                 grid-row: 1 / 2
                 grid-column: span 5
+    .modal
+        &__button
+            margin-bottom: 10px
+        &__dialog
+            padding: 33px 48px
+        &__info
+            margin-left: 0
 @media ( max-width: 666px )
     .packages
         &-wrapper
@@ -346,10 +363,18 @@
                 padding-bottom: 0
                 &__content
                     padding-bottom: 0
+        &__modal
+            &__dialog
+                padding: 33px 50px
+            &__button
+                display: flex
+                width: 100%
+                flex-basis: 100%
+
 @media ( max-width: 655px )
-  .container
-    max-width: 540px
-  .packages
+    .container
+        max-width: 540px
+    .packages
         &-wrapper
             grid-template-columns: 2fr
         &-card
@@ -380,7 +405,8 @@
             &__text
                 margin-bottom: 12px
             &__button
-                padding: 11px 15px
+                    padding: 11px 15px
+
 @media ( max-width: 654px )
     .container
         max-width: 540px
@@ -425,6 +451,14 @@
                     padding-bottom: 20px
                     max-height: 400px
                 // grid-template-rows: auto
+    .modal
+        &__dialog
+            padding: 33px 48px
+        &__button
+            display: flex
+        &__info
+            margin: 10px
+            margin-left: 0
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -526,6 +560,7 @@
                     padding-bottom: 20px
                     max-height: 400px
                 // grid-template-rows: auto
+
 
 @media ( max-width: 320px )
     .container 
@@ -781,6 +816,17 @@
                     padding: 5px
                 &__price-button-row
                     align-items: center
+    .modal
+        &__input
+            flex-basis: 100%
+        &__dialog
+            padding: 33px 28px
+            width: 250px
+        &__button
+            margin-bottom: 10px
+            display: flex
+        &__info 
+            margin-left: 0
 
 
 
