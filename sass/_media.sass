@@ -184,14 +184,10 @@
             grid-template-rows: 500px 500px 500px
             grid-template-columns: 1fr 1fr
     .modal
-        &__info
-            margin-left: 41px
-@media (max-width: 899px)
-    .modal
-        &__button
-            display: flex
-        &__info
-            margin-left: 0
+        &__dialog
+            width: 380px
+            padding: 33px 44px
+
 
 @media (max-width: 768px)
     .container,
@@ -343,13 +339,7 @@
                 margin-top: 17px
                 grid-row: 1 / 2
                 grid-column: span 5
-    .modal
-        &__button
-            margin-bottom: 10px
-        &__dialog
-            padding: 33px 48px
-        &__info
-            margin-left: 0
+
 @media ( max-width: 666px )
     .packages
         &-wrapper
@@ -363,13 +353,6 @@
                 padding-bottom: 0
                 &__content
                     padding-bottom: 0
-        &__modal
-            &__dialog
-                padding: 33px 50px
-            &__button
-                display: flex
-                width: 100%
-                flex-basis: 100%
 
 @media ( max-width: 655px )
     .container
@@ -451,14 +434,6 @@
                     padding-bottom: 20px
                     max-height: 400px
                 // grid-template-rows: auto
-    .modal
-        &__dialog
-            padding: 33px 48px
-        &__button
-            display: flex
-        &__info
-            margin: 10px
-            margin-left: 0
 @media (max-width: 576px)
     .logo
         width: 99px
@@ -817,16 +792,9 @@
                 &__price-button-row
                     align-items: center
     .modal
-        &__input
-            flex-basis: 100%
         &__dialog
-            padding: 33px 28px
-            width: 250px
-        &__button
-            margin-bottom: 10px
-            display: flex
-        &__info 
-            margin-left: 0
+            width: 300px
+            padding: 15px 15px
 
 
 

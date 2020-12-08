@@ -1847,7 +1847,18 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #BDBDBD;
-  margin-left: 42px;
+}
+
+.modal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal__button {
@@ -2122,19 +2133,9 @@ template {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  .modal__info {
-    margin-left: 41px;
-  }
-}
-
-@media (max-width: 899px) {
-  .modal__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .modal__info {
-    margin-left: 0;
+  .modal__dialog {
+    width: 380px;
+    padding: 33px 44px;
   }
 }
 
@@ -2356,15 +2357,6 @@ template {
     grid-row: 1 / 2;
     grid-column: span 5;
   }
-  .modal__button {
-    margin-bottom: 10px;
-  }
-  .modal__dialog {
-    padding: 33px 48px;
-  }
-  .modal__info {
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 666px) {
@@ -2379,17 +2371,6 @@ template {
   }
   .packages-card--1__content {
     padding-bottom: 0;
-  }
-  .packages__modal__dialog {
-    padding: 33px 50px;
-  }
-  .packages__modal__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
   }
 }
 
@@ -2511,18 +2492,6 @@ template {
             justify-content: space-between;
     padding-bottom: 20px;
     max-height: 400px;
-  }
-  .modal__dialog {
-    padding: 33px 48px;
-  }
-  .modal__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .modal__info {
-    margin: 10px;
-    margin-left: 0;
   }
 }
 
@@ -3029,22 +2998,9 @@ template {
         -ms-flex-align: center;
             align-items: center;
   }
-  .modal__input {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
   .modal__dialog {
-    padding: 33px 28px;
-    width: 250px;
-  }
-  .modal__button {
-    margin-bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .modal__info {
-    margin-left: 0;
+    width: 300px;
+    padding: 15px 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
