@@ -104,5 +104,5 @@ menuButton.addEventListener('click', function() {
       },
     });
   });
+    AOS.init();
 });
-
