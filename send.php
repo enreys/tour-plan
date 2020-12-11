@@ -8,7 +8,10 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$sendBooking = $_POST['booking-send'];
+$sendNewsletter = $_POST['newsletter-button'];
 $message = $_POST['message'];
+$sendFeedback = $_POST['feedback-send'];
 
 
 // Формирование самого письма
@@ -17,8 +20,39 @@ $body = "
 <h2>Новое обращение</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+<b>Сообщение:</b><br>$message";
+
+
+
+
+if (isset($_POST['newsletter-button'])) {
+    $title = "Подписка на новости";
+    $body = "
+    <h1>Новое обращение</h1>
+    Пользователь подписался на новостную подписку.<br>
+    Его <b>e-mail:</b> $email";
+  } else if (isset($_POST['feedback-send'])) {
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message";
+  } else if (isset($_POST['booking-send'])) {
+    $title = "Новое бронирование отеля";
+    $body = "<h2>Новое бронирование отеля</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>E-mail:</b> $email<br><br>
+    <b>Сообщение:</b><br>$message";
+  }
+
+
+
+
+
+
+
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -57,3 +91,10 @@ else {$result = "error";}
 
 // Отображение результата
 header('Location: thankyou.html');
+if (isset($_POST['email'])) {
+    header('Location: thankyou.html');
+  } else if (isset($_POST['feedback-send'])) {
+    header('Location: thankyou.html');
+  } else if (isset($_POST['booking-send'])) {
+    header('Location: thankyou.html');
+  }

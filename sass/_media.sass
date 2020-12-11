@@ -18,6 +18,8 @@
             width: 230px
             height: 230px
     .footer
+        &__info
+            align-content: end
         &__input
             // width: 100%
             &-group
@@ -91,7 +93,7 @@
                     display: none
             &__button
                 top: 48%
-                transform: translateY(-55%)
+                transform: translateY(-30%)
                 &--prev
                     margin-left: 0px
                     left: 0
@@ -99,8 +101,7 @@
                     margin-right: 0px
                     right: 0
     .activities
-        padding-top: 14px
-        padding: 20px 0 50px 0
+        padding: 40px 0 50px 0
         &__title
             margin-top: 11px
             margin-bottom: 57px
@@ -581,10 +582,10 @@
         // padding: 15px 15px 0
     &__wrapper
         flex-direction: column
-    &__info
-        align-self: start
-        order: -1
-        margin-bottom: 15px
+    // &__info
+    //     align-self: start
+    //     order: -1
+    //     margin-bottom: 15px
     &__button
         width: 100%
     &__form
@@ -593,6 +594,9 @@
     .container 
         max-width: 281px
     .navbar
+        &--mobile
+            &_fixed
+                max-width: 320px
         &-top
             padding-top: 22px
             &__menu-button
@@ -735,9 +739,9 @@
                 flex-basis: 100%
         &__button 
             order: 1
-        &__info
-            margin-bottom: 15px
-            width: 100%
+        // &__info
+        //     margin-bottom: 15px
+        //     width: 100%
         &__rules
             margin-top: 30px
         &__social
@@ -847,18 +851,18 @@
                     align-items: center
     .modal
         &__dialog
+            top: 50%
+            left: 50%
             max-width: 300px 
             padding: 15px 15px 0
-        &__wrapper
-            flex-direction: column
         &__button
             width: 100%
         &__form
             padding-bottom: 15px
         &__info
-            align-self: start
-            order: -1
-            margin-bottom: 15px
+            // align-self: start
+            // order: -1
+            // margin-bottom: 15px
 
 
 

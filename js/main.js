@@ -84,25 +84,63 @@ menuButton.addEventListener('click', function() {
     modalDialog.removeClass('modal__dialog--visible');
   }
 
-  //  Обработка форм
-    $('.form').each(function(){
-    $('.phone-form').mask('+7 (999) 999-99-99');
-    $(this).validate( {
+
+  $('.form').each(function () {
+    $(this).validate({
       errorClass: "invalid",
       messages: {
         name: {
-          required: "Укажите ваше имя",
-          minlength: "Имя должно быть не короче 2 букв",
+          required: "Пожалуйста введите свое имя",
+          minlength: "Имя должно быть не короче 2 букв"
         },
         email: {
           required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
           email: "Ваш электронный адрес должен выглядеть так: name@domain.com"
         },
-        phone: {
-          required: "Телефон обязателен",
-        },
-      },
+        phone: "Пожалуйста введите ваш номер"
+      }
     });
   });
+
+  $('.newsletter__search').validate({
+    errorClass: "invalid-subscribe",
+    messages: {
+      email: {
+        required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
+        email: "Ваш электронный адрес должен выглядеть так: name@domain.com"
+      }
+    }
+  });
+
+  $('.phone-form').each(function () {
+    $(this).mask('+7 (000) 000-00-00');
+  });
+
+
+
+  //  Обработка форм
+  //   $('.form').each(function(){
+  //   $('.phone-form').mask('+7 (999) 999-99-99');
+  //   $(this).validate( {
+  //     errorClass: "invalid",
+  //     messages: {
+  //       name: {
+  //         required: "Укажите ваше имя",
+  //         minlength: "Имя должно быть не короче 2 букв",
+  //       },
+  //       email: {
+  //         required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
+  //         email: "Ваш электронный адрес должен выглядеть так: name@domain.com"
+  //       },
+  //       phone: {
+  //         required: "Телефон обязателен",
+  //       },
+  //     },
+      
+  //   });
+  //   $('.phone-form').each(function () {
+  //     $(this).mask('+7 (000) 000-00-00');
+  //   });
+  // });
     AOS.init();
 });

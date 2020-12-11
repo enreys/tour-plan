@@ -3,6 +3,11 @@
     color: $light
     padding-top: 108px
     padding-bottom: 46px
+    &__wrapper
+        display: flex
+        align-items: center
+        width: 100%
+        justify-content: space-between
     &-wrapper
         display: grid
         grid-template-columns: repeat(4, minmax(min-content, 1fr))
@@ -15,6 +20,10 @@
         max-width: 154px
         max-height: 175px
         grid-row: 1 / 3
+    &__telephone
+        &-wrapper
+            display: flex
+            flex-direction: column
     &__categories
         grid-row: 1 / 4
     &__additional
