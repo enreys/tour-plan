@@ -1,20 +1,21 @@
 .thankyou
     &__block
         margin-bottom: 35px
-    &__backtomain
-        padding: 10px
+    &-button
         margin-top: 25px
+        padding: 18px 
         color: $light
         background-color: $primary
         font-style: normal
         border: none
-        font-weight: 600
-        text-align: center
-        align-items: center
         border-radius: 4px
         cursor: pointer
         transition-duration: 0.1
         overflow: hidden
+        font-weight: bold
+        &:hover
+            transition: 1s ease-out 0.1s
+            background-color: lighten($dark, 10%)
     &-link
         text-decoration: none
         color: $light
@@ -22,7 +23,7 @@
         font-size: 20px
         text-transform: uppercase
     &__description
-        margin-bottom: 0
+        margin-bottom: 40px
 .arrow-back
     width: 20px
     height: 20px
