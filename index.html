@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
    
@@ -23,7 +23,7 @@
                 </a>
                 <form action="#" class="search navbar__search navbar__search--mobile_hidden" data-aos="fade-right" data-aos-delay="200">
                     <input type="text" class="search__input" maxlength="40" placeholder="Search Location">
-                    <button class="search__button">
+                    <button class="search__button button">
                         <img src="img/search.svg" alt="Icon: Search">
                     </button>
                 </form>
@@ -54,7 +54,7 @@
                     <li class="navbar-menu__item navbar-menu__item--mobile_visible">
                       <form action="#" class="search navbar__search navbar__search--mobile_visible">
                         <input type="text" class="search__input" maxlength="40" placeholder="Search Location">
-                        <button class="search__button">
+                        <button class="search__button button">
                             <img src="img/search.svg" alt="Icon: Search">
                         </button>
                       </form>
@@ -400,26 +400,26 @@
                         <img src="img/activity-1.jpg" alt="The curious corner" class="card__image">
                         <h3 class="card__title">The curious corner
                           of&nbsp;chamarel</h3>
-                        <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
+                        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
                     </div>
                     <div class="card activities__card" data-aos="fade-up"  data-aos-delay="300">
                         <img src="img/activity-2.jpg" alt="Gymkhana club golf" class="card__image">
                         <h3 class="card__title"> Gymkhana club golf
                           course</h3>
-                        <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
+                        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
                     </div>
                     <div class="card activities__card" data-aos="fade-up"  data-aos-delay="500">
                         <img src="img/activity-3.jpg" alt="Tamarind falls hiking" class="card__image">
                         <h3 class="card__title">Tamarind falls hiking 
                           trip&nbsp;-&nbsp;full day
                             </h3>
-                        <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
+                        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
                     </div>
                     <div class="card activities__card" data-aos="fade-up"  data-aos-delay="700">
                         <img src="img/activity-4.jpg" alt="The blue marine discovery" class="card__image">
                         <h3 class="card__title">The blue marine discovery
                             quest</h3>
-                        <button class="card__button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
+                        <button class="card__button button" data-toggle="modal" data-href="#booking-modal">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -455,9 +455,9 @@
                     <div class="footer__list footer__social-network">
                         <h3 class="footer__title footer__title--inline">Social Network</h3>
                         <div class="footer__social-links">
-                            <a href="https://www.facebook.com/" class="footer__link"><img src="img/facebook.svg" alt="Logo: Facebook"></a>
-                            <a href="https://www.youtube.com/" class="footer__link"><img src="img/youtube.svg" alt="Logo: Youtube"></a>
-                            <a href="https://www.instagram.com/" class="footer__link"><img src="img/instagram.svg" alt="Logo: Instagram"></a>
+                            <a href="https://www.facebook.com/" class="footer__link"><img class="footer__link-img"src="img/facebook.svg" alt="Logo: Facebook"></a>
+                            <a href="https://www.youtube.com/" class="footer__link"><img class="footer__link-img"src="img/youtube.svg" alt="Logo: Youtube"></a>
+                            <a href="https://www.instagram.com/" class="footer__link"><img class="footer__link-img"src="img/instagram.svg" alt="Logo: Instagram"></a>
                         </div>
                     </div>
                     <div class="footer__list footer__legal">
@@ -480,8 +480,10 @@
                                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
                             </li>
                             <li class="footer__item footer__item--mb-2">
-                                <div class="footer__icon-wrapper">
-                                    <img class="footer__icon" src="img/phone-footer.svg" alt="Icon: Phone">
+                                <div class="footer__icon-wrapper"> <a href="#">
+                                  <img class="footer__icon" src="img/phone-footer.svg" alt="Icon: Phone">
+                                </a>
+                                    
                                 </div>
                                 <div class="footer__telephone-wrapper">
                                   <span class="footer__telephone">Tel (business hours) : <a href="tel:2691500" class="footer__link">269
@@ -502,23 +504,6 @@
                             </li>
                         </ul> 
                     </div>
-                    <!-- <div class="footer__contact-form">
-                        <h3 class="footer__title  footer__title--mb-3 mt-4">Send us a message</h3>
-                        <form action="send.php" method="POST" class="footer__form form" data-aos="flip-up" data-aos-delay="100" >
-                            <div class="footer__input-group">
-                              <input type="text" class="input footer__input"  maxlength="40" placeholder="Your Full Name*" name="name" required data-aos="flip-up" data-aos-delay="100" >
-                            </div>
-                            <div class="footer__input-group">
-                              <input type="text" class="input footer__input phone-form" maxlength="40" placeholder="Phone Number*" name="phone" required data-aos="flip-up" data-aos-delay="100" > 
-                            </div>
-                            <textarea class="footer__message message" placeholder="Message" name="message" data-aos="flip-up" data-aos-delay="100" ></textarea>
-                            <div class="footer__wrapper">
-                                <button class="button footer__button" data-aos="flip-up" data-aos-delay="100">Send</button>
-                                <span class="footer__info">* Required Fields</span>
-                            </div>
-                        </form>
-                    </div> -->
-
 
                     <div class="footer__contact-form" >
                       <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
@@ -532,7 +517,7 @@
                         </div>
                         <textarea name="message" cols="30" rows="10" class="message footer__message"
                           placeholder="Message" data-aos="flip-up" data-aos-delay="200"></textarea>
-                        <div class="footer__form-wrapper" data-aos="flip-up" data-aos-delay="200">
+                        <div class="footer__form-wrapper" data-aos="flip-up" data-aos-delay="200">  
                           <input type="submit" name="feedback-send" value="Send" class="button footer__button">
                           <span class="footer__info footer__info--mr-1">* Required Fields</span>
                         </div>
@@ -597,6 +582,10 @@
               </form>
           </div>
         </div>
+
+
+
+
         
         <script src="js/jquery-3.5.1.min.js"></script>
         <script src="js/swiper-bundle.min.js"></script>

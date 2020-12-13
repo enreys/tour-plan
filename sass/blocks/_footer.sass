@@ -52,6 +52,11 @@
         display: flex
         justify-content: space-between
         flex-wrap: wrap
+        &-wrapper
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
     &__ul
         cursor: pointer
         padding: 0
@@ -102,6 +107,8 @@
         line-height: 160%
         color: inherit
         cursor: pointer
+        &:hover
+            color: $light
     &__input
         width: 100%
         &-group
@@ -160,6 +167,5 @@
         height: 22px
         grid-column: 3
         justify-self: end
-    
 
         

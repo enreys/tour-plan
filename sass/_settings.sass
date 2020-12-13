@@ -24,30 +24,54 @@ ul
   &:active
     background-color: lighten($primary, 10%)
 a
-  color: $text-color
+  color: $light
+  cursor: pointer
   text-decoration: none
+.navbar
+  &-menu
+    &__link
+      &:hover
+        border-bottom: 1px solid $light
 
+.activities
+  &__card
+    &:hover
+      box-shadow: 0 0 15px #5a5a5a80
+      cursor: pointer
+
+
+
+
+      
 .input
   background: #FFFFFF
   border-radius: 4px
   border: none
   padding: 0 23px
   height: 50px
+  position: relative
 .message
   resize: none 
   background: #FFFFFF
   border-radius: 4px
   padding: 18px 23px
-.button
+.button, .rating
   color: $light
   background-color: $primary
   font-style: normal
   border: none
   border-radius: 4px
   cursor: pointer
+  transition-duration: 0.1
+  overflow: hidden
+  &:hover
+    transition: 1s ease-out 0.1s
+    background-color: lighten($dark, 10%) 
+
 .invalid
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
   font-size: 15px
+  font-weight: 600
   color: $primary
   border-bottom: 2px solid $primary
   transform: translate3d(0, 0, 0)
@@ -62,3 +86,4 @@ a
     transform: translate3d(-4px, 0, 0)
   40%, 60% 
     transform: translate3d(4px, 0, 0)
+  

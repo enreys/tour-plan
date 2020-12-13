@@ -103,7 +103,7 @@ menuButton.addEventListener('click', function() {
   });
 
   $('.newsletter__search').validate({
-    errorClass: "invalid-subscribe",
+    errorClass: "invalid",
     messages: {
       email: {
         required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
