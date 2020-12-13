@@ -35,7 +35,6 @@ function init() {
         }, {
             searchControlProvider: 'yandex#search'
         }),
-
     // Создаем геообъект с типом геометрии "Точка".
         myGeoObject = new ymaps.GeoObject({
             // Описание геометрии.
@@ -43,21 +42,10 @@ function init() {
                 type: "Point",
                 coordinates: [7.838, 98.2989]
             },
-        }, {
-            // preset: 'islands#blackStretchyIcon',
-            draggable: true
-        }),
-        myPieChart = new ymaps.Placemark([
-          7.838, 98.2989
-        ]);
+        });
     myMap.geoObjects
         .add(myGeoObject)
         .add(myPieChart)
-        .add(new ymaps.Placemark([7.838, 98.2989], {
-        }, {
-            preset: 'islands#icon',
-            iconColor: '#0095b6'
-        }))
 }
 $('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpg'});
 
@@ -101,17 +89,6 @@ menuButton.addEventListener('click', function() {
       }
     });
   });
-
-  $('.newsletter__search').validate({
-    errorClass: "invalid",
-    messages: {
-      email: {
-        required: "Нам нужен ваш email, чтобы мы могли связаться с вами",
-        email: "Ваш электронный адрес должен выглядеть так: name@domain.com"
-      }
-    }
-  });
-
   $('.phone-form').each(function () {
     $(this).mask('+7 (000) 000-00-00');
   });

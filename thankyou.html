@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Tour Plan - Hotel Booking</title>
-    <link  href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" rel="preload">   
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">    
+    
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link  href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;700;800&display=swap" as="style" rel="preload">   
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -48,7 +52,7 @@
                     <li class="navbar-menu__item navbar-menu__item--mobile_visible">
                       <form action="#" class="search navbar__search navbar__search--mobile_visible">
                         <input type="text" class="search__input" maxlength="40" placeholder="Search Location">
-                        <button class="search__button">
+                        <button class="search__button button">
                             <img src="img/search.svg" alt="Icon: Search">
                         </button>
                       </form>
@@ -81,11 +85,11 @@
         <div class="container">
             <h1 class="thankyou__title">Thank you! Message sent</h1>
             <p class="thankyou__description">Our manager will call you in 5 minutes.</p>
-            <button class="thankyou__back-to-main button">
+            <button class="button thankyou__backtomain">
                 <a class="thankyou-link" href="index.html">Back to main page</a>
             </button>
         </div>
-       </div>
+    </div>
         <footer class="footer">
             <div class="container">
                 <div class="footer-wrapper">
@@ -117,9 +121,9 @@
                     <div class="footer__list footer__social-network">
                         <h3 class="footer__title footer__title--inline">Social Network</h3>
                         <div class="footer__social-links">
-                            <a href="https://www.facebook.com/" class="footer__link"><img src="img/facebook.svg" alt="Logo: Facebook"></a>
-                            <a href="https://www.youtube.com/" class="footer__link"><img src="img/youtube.svg" alt="Logo: Youtube"></a>
-                            <a href="https://www.instagram.com/" class="footer__link"><img src="img/instagram.svg" alt="Logo: Instagram"></a>
+                            <a href="https://www.facebook.com/" class="footer__link"><img class="footer__link-img" src="img/facebook.svg" alt="Logo: Facebook"></a>
+                            <a href="https://www.youtube.com/" class="footer__link"><img class="footer__link-img" src="img/youtube.svg" alt="Logo: Youtube"></a>
+                            <a href="https://www.instagram.com/" class="footer__link"><img class="footer__link-img" src="img/instagram.svg" alt="Logo: Instagram"></a>
                         </div>
                     </div>
                     <div class="footer__list footer__legal">
@@ -142,13 +146,16 @@
                                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
                             </li>
                             <li class="footer__item footer__item--mb-2">
-                                <div class="footer__icon-wrapper">
-                                    <img class="footer__icon" src="img/phone-footer.svg" alt="Icon: Phone">
+                                <div class="footer__icon-wrapper"> <a href="#">
+                                  <img class="footer__icon" src="img/phone-footer.svg" alt="Icon: Phone">
+                                </a>
+                                    
                                 </div>
                                 <div class="footer__telephone-wrapper">
                                   <span class="footer__telephone">Tel (business hours) : <a href="tel:2691500" class="footer__link">269
                                       1500</a></span>
-                                  <span class="footer__telephone">Tel (hotline) Monday - Saturday: 
+                                  <span class="footer__telephone">Tel (hotline) Monday - Saturday:
+                                    <br class='footer__telephone-wrap'>
                                     <a  href="tel:52566138" class="footer__link">52-56-61-38</a> (08:00 am – 20:00 pm)</span>
                                       <span
                                     class="footer__telephone">
@@ -164,19 +171,20 @@
                             </li>
                         </ul> 
                     </div>
-                    <div class="footer__contact-form">
-                      <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+
+                    <div class="footer__contact-form" >
+                      <h3 class="footer__title footer__title--mb-3 footer__title--mb-5">Send us a message</h3>
                       <form action="send.php" method="POST" class="footer__form form">
-                        <div class="footer__input-group">
-                          <input name="name" required minlength="2" type="text" class="input footer__input" placeholder="Your Full Name*" required>
+                        <div class="footer__input-group" data-aos="flip-up" data-aos-delay="200">
+                          <input name="name" required minlength="2" type="text" class="input footer__input" placeholder="Your Full Name*">
                         </div>
-                        <div class="footer__input-group">
+                        <div class="footer__input-group" data-aos="flip-up" data-aos-delay="200">
                           <input name="phone" type="tel" class="input footer__input phone-form" placeholder="Phone Number*"
                             required minlength="18">
                         </div>
                         <textarea name="message" cols="30" rows="10" class="message footer__message"
-                          placeholder="Message"></textarea>
-                        <div class="footer__form-wrapper">
+                          placeholder="Message" data-aos="flip-up" data-aos-delay="200"></textarea>
+                        <div class="footer__form-wrapper" data-aos="flip-up" data-aos-delay="200">  
                           <input type="submit" name="feedback-send" value="Send" class="button footer__button">
                           <span class="footer__info footer__info--mr-1">* Required Fields</span>
                         </div>
@@ -208,7 +216,7 @@
               <h3 class="modal__title  modal__title--mb-3 mt-4">BOOKING</h3>
               <form action="send.php" method="POST" class="modal__form form">
                   <!-- <input type="text" class="input modal__input" maxlength="40" placeholder="Your Full Name*" name="name" required minlength="2"> -->
-                  <input type="text" name="name" required minlength="2" type="text" class="input modal__input" placeholder="Your Full Name*" required>
+                  <input type="text" name="name" required minlength="2" class="input modal__input" placeholder="Your Full Name*">
                   <!-- <input type="text" class="input modal__input phone-form"  maxlength="40" placeholder="Phone number*" name="phone" required> -->
                   <input name="phone" type="tel" class="input modal__input phone-form" placeholder="Phone Number*" required minlength="18">             
                   <!-- <input type="text" class="input modal__input" maxlength="40" placeholder="Email*" name="email" required> -->
@@ -221,6 +229,7 @@
               </form>
           </div>
         </div>
+
         <div class="modal" id="rating-modal">
           <div class="modal__overlay"></div>
           <div class="modal__dialog">
@@ -229,7 +238,7 @@
             </a>
               <h3 class="modal__title  modal__title--mb-3 mt-4">Send us a feedback</h3>
               <form action="send.php" method="POST" class="modal__form form">
-                  <input type="text" name="name" required minlength="2" type="text" class="input modal__input" placeholder="Your Full Name*" required>
+                  <input name="name" required minlength="2" type="text" class="input modal__input" placeholder="Your Full Name*">
                   <input name="phone" type="tel" class="input modal__input phone-form" placeholder="Phone Number*" required minlength="18">
                   <input type="email" class="modal__input input" maxlength="40" placeholder="Your email address" name="email" required>
                   <textarea class="modal__message message" placeholder="Message" maxlength="180" name="message"></textarea>
